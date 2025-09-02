@@ -1,0 +1,145 @@
+// design 1 TextGenerator.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quotes Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>📜 Quotes Generator</h1>
+  <button id="generateBtn">Generate Quote</button>
+  <div id="output">Your quote will appear here...</div>
+
+  <script>
+    const quotes = [
+      "🌟 Believe in yourself and all that you are.",
+      "💡 The future depends on what you do today.",
+      "🔥 Push yourself, because no one else is going to do it for you.",
+      "🚀 Dream big. Start small. Act now.",
+      "💪 Don’t stop until you’re proud.",
+      "🌈 Every day is a second chance.",
+      "🏆 Success is the sum of small efforts repeated daily."
+    ];
+
+    const output = document.getElementById("output");
+    const btn = document.getElementById("generateBtn");
+
+    btn.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      output.textContent = quotes[randomIndex];
+    });
+  </script>
+</body>
+</html>
+//manually formatting by Ashim Bahadur Nepali
+// design 2 TextGenetor.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const quotes = [
+      "🌟 Believe in yourself and all that you are.",
+      "💡 The future depends on what you do today.",
+      "🔥 Push yourself, because no one else is going to do it for you.",
+      "🚀 Dream big. Start small. Act now.",
+      "💪 Don’t stop until you’re proud.",
+      "🌈 Every day is a second chance.",
+      "🏆 Success is the sum of small efforts repeated daily."
+      ];
+        const container = document.createElement('div');
+        container.className="container";
+
+       const h3 = document.createElement('h3');
+       h3.textContent ="Quotes Generator";
+
+       const btn = document.createElement('button');
+       btn.id="btn";
+       btn.textContent="Generate quotes";   
+
+       const showQuotes = document.createElement('div');
+       showQuotes.className = "showQuote";
+       showQuotes.textContent = "your quotes will appear here.... ";
+
+       container.appendChild(h3);
+       container.appendChild(btn);
+       container.appendChild(showQuotes);
+       document.body.appendChild(container);
+
+       btn.addEventListener('click',()=>{
+        const randowText = Math.floor(Math.random()*quotes.length);
+        showQuotes.textContent = quotes[randowText];
+       });
+
+       const style = document.createElement('style');
+       style.textContent =`
+       body{
+       background-color:#f3f4f6;
+       font-family:Arail;
+       text-align:center;
+       }
+       .container{
+       background-color:#fff;
+       width:500px;
+       margin:40px auto;
+       font-size:18px;
+       padding:20px;
+       box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+       }
+       
+       #btn{
+       padding:10px 20px;
+       background-color:#2563EB;
+       color:white;
+       font-size:16px;
+       border-radius:8px;
+       margin-bottom:30px;
+       cursor:pointer;
+       }
+       #btn:hover {
+       background: #0055cc;
+       }
+       .showQuote{
+       padding:20px;
+       border:1px solid #ccc;
+       border-radius:8px;
+       background-color:#f9f9f9;
+       font-size:18px;
+       width:60%;
+       margin-right:auto;
+       margin-left:auto;
+       }
+       
+       `;
+       document.body.appendChild(style);
+
+    </script>
+</body>
+</html>
