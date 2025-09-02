@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Keyless APIs Hackathon Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, hwb(269 53% 39%), #2575fc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 10px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9800;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fun APIs Hackathon Demo</h1>
+
+  <div class="card">
+    <h2>Random Dog</h2>
+    <img id="dogImg" src="" alt="Dog Image">
+    <button onclick="fetchDog()">New Dog</button>
+  </div>
+
+  
+  <script>
+    async function fetchDog() {
+      const res = await fetch('https://dog.ceo/api/breeds/image/random');
+      const data = await res.json();
+      document.getElementById('dogImg').src = data.message;
+    }
+
+   
+    // Load default data on page load
+    fetchDog();
+
+  </script>
+</body>
+</html>
