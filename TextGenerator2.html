@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const style = document.createElement('style');
+        style.textContent =`
+        body{
+        text-align:center;
+        font-family:Arial;
+        background-color:#f3f4f6;
+        }
+        h3{
+        font-size:23px;
+        color:purple;
+        
+        }
+        .generateBtn{
+        padding:10px 20px;
+        border-radius:8px;
+        font-size:18px;
+        background-color:green;
+        color:white;
+        cursor:pointer;
+        transition:0.3s ease all;
+        margin-bottom:30px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+        generateBtn:hover{
+        background-color:#9CA3AF;
+        }
+        .textDiv{
+        padding:20px;
+        background-color:#fff;
+        width:60%;
+        margin-right:auto;
+        margin-left:auto;
+        border-radius:8px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        font-size:19px;
+        color:#1F2937;
+        text-shadow:2px 2px 5px rgba(0,0,0,0.3), 
+        -2px -2px 5px rgba(255,255,255,0.2);
+        }
+        
+        
+        
+        `;
+       document.head.appendChild(style);
+
+       const h3 = document.createElement('h3');
+       h3.textContent = "Random Text Generator";
+       document.body.appendChild(h3);
+
+       const btn = document.createElement('button');
+       btn.className = "generateBtn";
+       btn.textContent = "Text Generator";
+       document.body.appendChild(btn);
+
+       const textDiv = document.createElement('div');
+       textDiv.className = "textDiv";
+       textDiv.textContent = "Your text will appear here....";
+       document.body.appendChild(textDiv);
+
+    btn.addEventListener('click', () => {
+    async function dataFetch() {
+    try {
+      let response = await fetch("https://official-joke-api.appspot.com/random_joke");
+      let data = await response.json();
+      textDiv.textContent = `${data.setup} - ${data.punchline}`;
+    } catch (error) {
+      console.error("Error: " + error.message);
+    }
+    }
+    dataFetch();
+   });
+
+    </script>
+</body>
+</html>
