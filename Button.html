@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:linear-gradient(135deg, hsl(255, 39%, 70%),hsl(22, 44%, 54%));
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        text-align:center;
+        align-items:center;
+        padding:20px;
+        gap:10px;
+
+      }
+      .container{
+        background-color:#fff;
+        width:400px;
+        padding:20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius:8px;
+        font-weight:bold;
+        font-size:18px; 
+      }
+      button{
+        width:100%;
+        padding:10px 20px;
+        outline:none;
+        border:none;
+        border-radius:12px;
+        font-size:18px;
+        background:rgb(213, 114, 22);
+        color:white;
+        text-shadow:3px -2px 3px red;
+        transition:0.3 ease all;
+        cursor:pointer;
+      }
+      button:hover{
+        background:hsl(27, 52%, 33%);
+      }
+    </style>
+</head>
+<body>
+   <div class="container" id="removebox">
+    <p>Enabling  goals create  a more  desriable  business condition or take  advantage of a business opportunity</p>
+    <button onclick="removeElement()">Remove</button>
+   </div> 
+    <div class="container" id="hidebox">
+    <p>Enabling  goals create  a more  desriable  business condition or take  advantage of a business opportunity</p>
+    <button onclick="hideElement()">Hidden</button>
+   </div> 
+    <div class="container" id="resetbox">
+    <p>Enabling  goals create  a more  desriable  business condition or take  advantage of a business opportunity</p>
+    <button onclick="restbox()">ResetAll</button>
+   </div> 
+
+   <script>
+    function removeElement(){
+        document.getElementById('removebox').style.display="none";
+    }
+    function hideElement(){
+        document.getElementById('hidebox').style.visibility= "hidden";
+    }
+    function restbox(){
+        document.getElementById('removebox').style.display = "block";
+        document.getElementById('hidebox').style.visibility = "visible";
+    }
+   </script>
+</body>
+
+</html>
