@@ -1,0 +1,78 @@
+.navbar {
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    .navbar-brand {
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff !important;
+      letter-spacing: 1px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin-right: 1rem;
+      position: relative;
+      transition: 0.3s;
+    }
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ffc107;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+    .navbar-toggler {
+      border: none;
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    /* Transparent to solid on scroll */
+    .navbar.scrolled {
+      background-color: rgba(0,0,0,0.9) !important;
+      padding: 0.5rem 2rem !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  .btn:hover{
+   background-color:#e0a800;
+   color:white;
+  }
+  .header-text-logo{
+    font-size:18px;
+    color:#ffc107;
+  }
+
+.hero {
+      background: url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 50vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .contact-info i {
+      font-size: 1.5rem;
+      color: #ffc107;
+      margin-right: 10px;
+    }
+      
