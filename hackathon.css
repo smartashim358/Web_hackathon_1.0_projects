@@ -1,3 +1,4 @@
+
 .navbar {
       padding: 1rem 2rem;
       transition: all 0.3s ease;
@@ -14,6 +15,7 @@
       margin-right: 1rem;
       position: relative;
       transition: 0.3s;
+      font-family:Arial;
     }
     .navbar-nav .nav-link::after {
       content: '';
@@ -75,4 +77,48 @@
       color: #ffc107;
       margin-right: 10px;
     }
+    section {
+        background-color:#f3f4f6;
+    }
+     .hero-about {
+      height: 60vh;
+      background: url('about-background.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero-about::after {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
       
+    }
+    .hero-about h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .section-title {
+      margin-bottom: 2rem;
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .team-member h5 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .team-member p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+   
